@@ -1,0 +1,30 @@
+---
+import { SITE_TITLE } from '../config';
+import HeaderLink from './HeaderLink.astro';
+
+const { pathname } = Astro.url;
+
+const isHome = pathname == '/'
+---
+
+<header>
+	<h2>
+		{isHome ? "👋 Hi!, I'm Horacio" : SITE_TITLE}
+	</h2>
+	<nav>
+		<HeaderLink href="/">Home</HeaderLink>
+		<HeaderLink href="/writing">Writing</HeaderLink>
+		<HeaderLink href="/about">About</HeaderLink>
+		<HeaderLink href="https://horacioh.github.io/braindump/" target="_blank">Notes</HeaderLink>
+		<!-- <HeaderLink href="https://mintter.com" target="_blank">Mintter</HeaderLink> -->
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		margin-bottom: 2em;
+	}
+	h2 {
+		margin: 0.5em 0;
+	}
+</style>

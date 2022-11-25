@@ -1,0 +1,24 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import { SITE_DESCRIPTION,SITE_TITLE } from '../config';
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+	</head>
+	<body>
+		<Header title={SITE_TITLE} />
+		<main>
+			<p>I'm Horacio Herrera, Designer & Developer consultant from Panama🇵🇦 living in Barcelona. I <del>help</del> helped companies develop digital products that users want.</p>
+
+			<p>Currently I'm building <strong><a target="_blank" href="https://mintter.com">Mintter</a></strong> a document publishing platform on top of Bitcoin ⚡️</p>
+
+			<p>You can find me in the internets on twitter, twitch, youtube, github, dribbble & codesandbox. You can also send me an email if you prefer.</p>
+		</main>
+		<Footer />
+	</body>
+</html>
